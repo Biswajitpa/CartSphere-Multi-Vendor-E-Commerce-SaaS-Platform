@@ -47,7 +47,7 @@ export default function Footer({ user }: { user: IUser }) {
           <div className="flex items-center gap-3 justify-center md:justify-start pt-1">
             {/* LinkedIn */}
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/biswajit-pattanaik-3586b82b3"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
@@ -69,7 +69,7 @@ export default function Footer({ user }: { user: IUser }) {
 
             {/* Instagram */}
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/_pattanaik_07?igsh=MWozbHFlZmNhNnNlZg=="
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
@@ -95,7 +95,7 @@ export default function Footer({ user }: { user: IUser }) {
 
             {/* Mail */}
             <a
-              href="mailto:pattanabiswajit07@gmail.com"
+              href="pattanabiswajit07@gmail.com"
               aria-label="Send email"
               className="flex items-center justify-center w-9 h-9 rounded-lg border border-gray-700 bg-[#1a1a1a] text-gray-400
                 hover:border-indigo-500 hover:text-indigo-400 hover:bg-indigo-500/10 transition-all duration-200"
