@@ -1,149 +1,113 @@
 "use client";
-
-import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { useSelector } from "react-redux";
+import { RootState } from "@/redux/store";
 import { IUser } from "@/models/user.model";
 
 export default function Footer({ user }: { user: IUser }) {
   const router = useRouter();
+
+
   const role = user?.role; // "user" | "admin" | "vendor"
 
-  const isUser = role === "user" || !role; // Fallback to user if role is undefined
-  const isAdmin = role === "admin";
-  const isVendor = role === "vendor";
-  const isAdminOrVendor = isAdmin || isVendor;
+  const isUser = role === "user";
+  const isAdminOrVendor = role === "admin" || role === "vendor";
 
   return (
-    <footer className="relative bg-neutral-950 text-neutral-400 border-t border-neutral-800/60 z-40 transition-colors duration-300">
-      {/* Decorative Top Accent Line based on user role */}
-      <div 
-        className={`h-[2px] w-full bg-gradient-to-r transition-all duration-500 ${
-          isAdmin 
-            ? "from-blue-600 via-indigo-500 to-transparent" 
-            : isVendor 
-            ? "from-emerald-600 via-teal-500 to-transparent" 
-            : "from-blue-500 via-purple-500 to-pink-500"
-        }`} 
-      />
+    <footer className="bg-gradient-to-br from-[#1f1f1f] to-[#0f0f0f] w-full text-gray-300 z-40 py-12 border-t border-gray-700">
+      <div
+        className={`max-w-7xl mx-auto px-6 grid gap-10 text-center md:text-left 
+        ${isUser ? "grid-cols-1 sm:grid-cols-2 lg:grid-cols-4" : "grid-cols-1 md:grid-cols-3"}`}
+      >
+        {/* ✅ BRAND SECTION - ALL */}
+        <div className="space-y-3">
+          <h2
+            onClick={() => router.push("/")}
+            className="text-white text-3xl font-bold cursor-pointer tracking-wide hover:text-blue-400 transition"
+          >
+            MultiCart
+          </h2>
 
-      <div className="max-w-7xl mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-8">
-          
-          {/* 1. BRAND SECTION */}
-          <div className="md:col-span-4 space-y-4">
-            <Link 
-              href="/" 
-              className="inline-block text-white text-2xl font-extrabold tracking-tight hover:opacity-90 transition"
+          <p className="text-sm leading-relaxed text-gray-400">
+            Smart, secure & scalable multi-vendor eCommerce platform built for
+            performance and growth.
+          </p>
+
+          {isAdminOrVendor && (
+            <span
+              className={`inline-block mt-2 text-[11px] px-3 py-1 rounded-full text-white
+              ${role === "admin" ? "bg-blue-600" : "bg-green-600"}`}
             >
-              Multi<span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">Cart</span>
-            </Link>
-            <p className="text-sm leading-relaxed text-neutral-400 max-w-sm">
-              Smart, secure & scalable multi-vendor eCommerce platform built for high performance, ease of use, and enterprise growth.
-            </p>
-            
-            {isAdminOrVendor && (
-              <div className="pt-2">
-                <span
-                  className={`inline-flex items-center gap-1.5 text-[11px] font-semibold tracking-wider uppercase px-3 py-1 rounded-full border ${
-                    isAdmin 
-                      ? "bg-blue-950/40 text-blue-400 border-blue-800/50" 
-                      : "bg-emerald-950/40 text-emerald-400 border-emerald-800/50"
-                  }`}
-                >
-                  <span className={`h-1.5 w-1.5 rounded-full ${isAdmin ? "bg-blue-400" : "bg-emerald-400"}`} />
-                  {isAdmin ? "Admin Console" : "Vendor Hub"}
-                </span>
-              </div>
-            )}
-          </div>
-
-          {/* 2. DYNAMIC CONTENT SECTION (Changes based on roles) */}
-          {isUser ? (
-            <>
-              {/* Quick Links */}
-              <div className="md:col-span-2 space-y-4">
-                <h3 className="text-sm font-semibold tracking-wider uppercase text-neutral-200">Explore</h3>
-                <ul className="space-y-2.5 text-sm">
-                  <li><Link href="/" className="hover:text-white transition-colors duration-200">Home</Link></li>
-                  <li><Link href="/category" className="hover:text-white transition-colors duration-200">Categories</Link></li>
-                  <li><Link href="/shop" className="hover:text-white transition-colors duration-200">Shop Products</Link></li>
-                  <li><Link href="/contact" className="hover:text-white transition-colors duration-200">Contact Us</Link></li>
-                </ul>
-              </div>
-
-              {/* Help & Support */}
-              <div className="md:col-span-2 space-y-4">
-                <h3 className="text-sm font-semibold tracking-wider uppercase text-neutral-200">Support</h3>
-                <ul className="space-y-2.5 text-sm">
-                  <li><Link href="/support" className="hover:text-white transition-colors duration-200">Help Center</Link></li>
-                  <li><Link href="/orders" className="hover:text-white transition-colors duration-200">Track Order</Link></li>
-                  <li><Link href="/terms" className="hover:text-white transition-colors duration-200">Privacy & Terms</Link></li>
-                </ul>
-              </div>
-            </>
-          ) : (
-            /* Admin / Vendor Metrics Overview Card */
-            <div className="md:col-span-4">
-              <div className={`p-5 rounded-xl border bg-neutral-900/40 backdrop-blur-sm ${
-                isAdmin ? "border-blue-900/30 shadow-blue-950/10" : "border-emerald-900/30 shadow-emerald-950/10"
-              } shadow-lg`}>
-                <h3 className="text-sm font-semibold text-neutral-200 mb-3 flex items-center gap-2">
-                  <span>{isAdmin ? "System Overview" : "Merchant Scope"}</span>
-                </h3>
-                <ul className="space-y-2 text-xs text-neutral-400">
-                  {isAdmin ? (
-                    <>
-                      <li className="flex items-center gap-2">─ Platform Management</li>
-                      <li className="flex items-center gap-2">─ Vendor Control & Approvals</li>
-                      <li className="flex items-center gap-2">─ System Security & Audits</li>
-                    </>
-                  ) : (
-                    <>
-                      <li className="flex items-center gap-2">─ Catalog & Inventory Operations</li>
-                      <li className="flex items-center gap-2">─ Order & Fulfillment Pipelines</li>
-                      <li className="flex items-center gap-2">─ Wallet Settlements & Payouts</li>
-                    </>
-                  )}
-                </ul>
-              </div>
-            </div>
+              {role === "admin" ? "Admin Panel" : "Vendor Dashboard"}
+            </span>
           )}
+        </div>
 
-          {/* 3. CONTACT INFO SECTION */}
-          <div className="md:col-span-4 space-y-4">
-            <h3 className="text-sm font-semibold tracking-wider uppercase text-neutral-200">Get in touch</h3>
-            <ul className="space-y-2.5 text-sm text-neutral-400">
-              <li className="flex items-center gap-2">
-                <span className="text-neutral-500">Email:</span>
-                <a href="mailto:pattanabiswajit07@gmail.com" className="hover:text-white transition-colors">
-                  pattanabiswajit07@gmail.com
-                </a>
-              </li>
-              <li className="flex items-center gap-2">
-                <span className="text-neutral-500">Phone:</span>
-                <a href="tel:+918658846620" className="hover:text-white transition-colors">
-                  +91 8658846620
-                </a>
-              </li>
-              <li className="flex items-center gap-2">
-                <span className="text-neutral-500">Location:</span>
-                <span>Khordha, India</span>
-              </li>
+        {/* ✅ QUICK LINKS - ONLY USER */}
+        {isUser && (
+          <div>
+            <h3 className="text-white text-lg font-semibold mb-4">Quick Links</h3>
+            <ul className="space-y-2 text-sm">
+              <li onClick={() => router.push("/")} className="cursor-pointer hover:text-white">Home</li>
+              <li onClick={() => router.push("/category")} className="cursor-pointer hover:text-white">Categories</li>
+              <li onClick={() => router.push("/shop")} className="cursor-pointer hover:text-white">Shop</li>
+              <li onClick={() => router.push("/contact")} className="cursor-pointer hover:text-white">Contact</li>
             </ul>
           </div>
+        )}
 
-        </div>
-
-        {/* BOTTOM LEGAL BAR */}
-        <div className="mt-16 pt-8 border-t border-neutral-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-500">
+        {/* ✅ SUPPORT - ONLY USER */}
+        {isUser && (
           <div>
-            © {new Date().getFullYear()} MultiCart. All rights reserved.
+            <h3 className="text-white text-lg font-semibold mb-4">Help & Support</h3>
+            <ul className="space-y-2 text-sm">
+              <li onClick={() => router.push("/support")} className="cursor-pointer hover:text-white">Support</li>
+              <li onClick={() => router.push("/orders")} className="cursor-pointer hover:text-white">Track Order</li>
+            </ul>
           </div>
-          <div className="flex items-center gap-1 text-neutral-600">
-            <span>Powered by</span>
-            <span className="font-medium text-neutral-400">Secure Commerce Engine</span>
+        )}
+
+        {/* ✅ ROLE INFO + VENDOR ACTIONS */}
+        {isAdminOrVendor && (
+          <div className="bg-[#1a1a1a] rounded-2xl p-6 shadow-lg border border-gray-700">
+            <h3 className="text-white text-lg font-semibold mb-3">
+              {role === "admin" ? "System Access" : "Vendor Dashboard"}
+            </h3>
+
+            <ul className="space-y-2 text-sm text-gray-400 mb-4">
+              {role === "admin" ? (
+                <>
+                  <li>✔ Platform Management</li>
+                  <li>✔ Vendor Control</li>
+                  <li>✔ Orders & Revenue</li>
+                  <li>✔ System Security</li>
+                </>
+              ) : (
+                <>
+                  <li>✔ Product Upload & Edit</li>
+                  <li>✔ Order & Delivery Tracking</li>
+                  <li>✔ Sales & Profit Analytics</li>
+                  <li>✔ Wallet & Settlement</li>
+                </>
+              )}
+            </ul>
+
+            
           </div>
+        )}
+
+        {/* ✅ CONTACT INFO - ALL */}
+        <div className="space-y-2">
+          <h3 className="text-white text-lg font-semibold mb-4">Contact Info</h3>
+          <p className="text-sm">pattanabiswajit07@gmail.com</p>
+          <p className="text-sm">+91 8658846620</p>
+          <p className="text-sm">khordha, India</p>
         </div>
+      </div>
+
+      {/* ✅ BOTTOM BAR */}
+      <div className="text-center text-xs text-gray-500 mt-12 border-t border-gray-700 pt-4">
+        © {new Date().getFullYear()} MultiCart — Powered by Secure Commerce Engine
       </div>
     </footer>
   );
