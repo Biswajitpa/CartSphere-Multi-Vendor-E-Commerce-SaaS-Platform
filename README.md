@@ -240,6 +240,30 @@ The platform provides live dashboards with real-time data for administrators and
 
 ---
 
+# 💬 Real-Time Chat System
+
+CartSphere includes a **real-time messaging system** that enables seamless communication between customers, vendors, and administrators. Customers can directly chat with vendors to ask product-related questions, request order updates, discuss return or replacement requests, and receive instant support before and after making a purchase. Vendors can respond in real time, improving customer satisfaction and reducing support delays.
+
+The chat system supports live message delivery, typing indicators, online/offline status, message timestamps, read receipts, image and file sharing, and conversation history. Customers automatically receive a chat option after placing an order, allowing them to communicate with the respective vendor regarding delivery, product issues, cancellations, or returns.
+
+Administrators can monitor conversations when necessary to resolve disputes, ensure compliance with marketplace policies, and provide additional support. The chat module is designed to be secure, scalable, and responsive, delivering a modern communication experience similar to leading e-commerce platforms.
+
+### Chat Features
+
+* 💬 Real-Time Customer ↔ Vendor Messaging
+* 👨‍💼 Admin Support & Conversation Monitoring
+* 🟢 Online/Offline Status
+* ✍️ Typing Indicators
+* ✅ Message Delivery & Read Receipts
+* 🖼️ Image and File Sharing
+* 📦 Order-Specific Chat
+* 🔔 Real-Time Notifications
+* 📱 Mobile Responsive Chat Interface
+* 🔒 Secure and Encrypted Communication
+* 🕒 Complete Chat History
+* 🚫 Block and Report Users
+
+
 ## 🌟 Why CartSphere?
 
 CartSphere is designed to deliver an enterprise-level marketplace experience similar to leading e-commerce platforms. It combines multi-vendor management, GST verification, administrator-controlled product approvals, real-time analytics, intelligent product search, secure payments, OTP-based delivery verification, configurable shipping options, customer reviews, ratings, order cancellation, and a 7-day return policy. Its scalable architecture, role-based security, and cloud-native design make it an ideal solution for building modern online marketplaces that support multiple businesses on a single platform.
