@@ -3,7 +3,7 @@ import "./globals.css";
 import Provider from "@/Provider";
 import StoreProvider from "@/redux/StoreProvider";
 import InitUser from "@/InitUser";
-import AppShell from "@/components/AppShell";
+import AppShell from "@/component/AppShell";
 
 export const metadata: Metadata = {
   title: "Multi-Cart",
