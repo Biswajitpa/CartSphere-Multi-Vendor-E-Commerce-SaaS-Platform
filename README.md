@@ -256,6 +256,20 @@ CartSphere delivers an enterprise-level marketplace experience by combining mult
 - [ ] Multi-currency & multi-region marketplace support
 - [ ] Vendor-facing API for external inventory sync
 
+---
+
+## 👨‍💻 Author
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Made%20with-%E2%9D%A4-red?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Engineered%20by-Biswajit%20Pattanaik-8A2BE2?style=for-the-badge" />
+</p>
+
+### **Biswajit Pattanaik**
+**Full-Stack Developer • System Design Engineer • AI Integration • Backend Engineering • UI/UX Designer • DevOps & Deployment Engineer**
+
+Designed, engineered, and deployed the **entire CartSphere platform** end-to-end — multi-tenant architecture, backend services, role-based dashboards, real-time chat system, and production infrastructure — as a single-owner, production-grade build.
+
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0:8A2BE2,100:FF6B00&height=100&section=footer" width="100%"/>
 </p>
