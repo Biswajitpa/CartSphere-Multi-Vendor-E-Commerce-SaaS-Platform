@@ -1,273 +1,261 @@
-# 🚀 CartSphere – Enterprise Multi-Vendor E-Commerce SaaS Platform
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:FF6B00,100:8A2BE2&height=200&section=header&text=CartSphere&fontSize=48&fontColor=ffffff&animation=fadeIn&fontAlignY=35" width="100%"/>
+</p>
 
-## 📖 Project Overview
+<p align="center">
+  <b>Enterprise Multi-Vendor E-Commerce SaaS Platform</b>
+</p>
 
-CartSphere is an enterprise-grade **Multi-Vendor E-Commerce SaaS Platform** where multiple independent companies (vendors) can register, create their own online stores, and sell products through a single cloud-based marketplace. Similar to platforms like Flipkart and Amazon, every vendor operates independently with its own products, orders, inventory, sales reports, and analytics, while the platform administrator manages and monitors the complete marketplace.
+<p align="center">
+  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" />
+  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" />
+  <img src="https://img.shields.io/badge/MongoDB_Atlas-47A248?style=for-the-badge&logo=mongodb&logoColor=white" />
+  <img src="https://img.shields.io/badge/NextAuth.js-000000?style=for-the-badge&logo=auth0&logoColor=white" />
+  <img src="https://img.shields.io/badge/Stripe%20%2F%20Razorpay-635BFF?style=for-the-badge&logo=stripe&logoColor=white" />
+  <img src="https://img.shields.io/badge/Cloudinary-3448C5?style=for-the-badge&logo=cloudinary&logoColor=white" />
+</p>
 
-The platform provides three dedicated dashboards for **Administrator**, **Vendor**, and **Customer**, each with role-based access and advanced management capabilities. Every company has its own business profile, GST verification, product catalog, order management, revenue analytics, and customer ratings.
+<p align="center">
+  <img src="https://img.shields.io/badge/Build-Passing-brightgreen?style=flat-square" />
+  <img src="https://img.shields.io/badge/Architecture-Multi--Tenant-informational?style=flat-square" />
+  <img src="https://img.shields.io/badge/Realtime-Enabled-blueviolet?style=flat-square" />
+  <img src="https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square" />
+  <img src="https://img.shields.io/badge/Maintained-Yes-success?style=flat-square" />
+</p>
 
----
-
-# 🏢 Multi-Vendor Marketplace
-
-Each vendor represents a separate company with its own:
-
-* Company Profile
-* GST Number Verification
-* Business Logo
-* Store Banner
-* Contact Information
-* Product Catalog
-* Inventory
-* Orders
-* Revenue Reports
-* Customer Ratings
-* Reviews
-* Dashboard Analytics
-
-Multiple companies can sell products simultaneously while customers shop from all vendors using one marketplace.
-
----
-
-# 👨‍💼 Administrator Features
-
-The administrator has complete control over the marketplace.
-
-### Vendor Management
-
-* Approve or reject vendor registrations
-* Verify GST Number
-* Verify company information
-* Review uploaded business documents
-* Approve vendor accounts
-* Block or suspend vendors
-* Manage vendor subscriptions
-
-### Product Approval
-
-Every product uploaded by a vendor requires administrator approval before becoming visible to customers.
-
-Admin can:
-
-* Review product details
-* Verify product images
-* Check pricing
-* Approve products
-* Reject products with reasons
-* Disable products anytime
-
-### Dashboard Analytics
-
-The admin dashboard displays real-time business insights including:
-
-* Daily Revenue
-* Monthly Revenue
-* Yearly Revenue
-* Total Orders
-* Pending Orders
-* Delivered Orders
-* Cancelled Orders
-* Return Requests
-* Total Vendors
-* Total Customers
-* Best Selling Products
-* Top Rated Products
-* Top Performing Vendors
-* Customer Ratings
-* Revenue by Vendor
-* Sales Graphs
-* Order Analytics
+<p align="center">
+  <a href="#-executive-summary">Executive Summary</a> •
+  <a href="#-platform-architecture">Architecture</a> •
+  <a href="#-role-based-modules">Modules</a> •
+  <a href="#-real-time-chat-system">Chat System</a> •
+  <a href="#-security--compliance">Security</a> •
+  <a href="#-tech-stack">Tech Stack</a> •
+  <a href="#-scalability-strategy">Scalability</a> •
+  <a href="#-roadmap">Roadmap</a>
+</p>
 
 ---
 
-# 🏪 Vendor Features
+## 🧭 Executive Summary
 
-Every vendor receives an independent dashboard containing:
+**CartSphere** is an enterprise-grade **multi-vendor e-commerce SaaS platform** — a single cloud-based marketplace where independent companies register, launch fully-managed storefronts, and sell products side by side, comparable in scope to Flipkart, Amazon, or Etsy's seller ecosystem.
 
-* Company Profile
-* GST Details
-* Store Logo
-* Store Banner
-* Product Management
-* Inventory Management
-* Order Management
-* Sales Analytics
-* Revenue Dashboard
-* Customer Reviews
-* Product Ratings
-* Stock Monitoring
-* Coupon Management
+Rather than a single-store shopping cart, CartSphere is architected as a **multi-tenant marketplace operating system**: every vendor operates an isolated business unit — its own catalog, inventory, orders, and analytics — while a central administrative layer governs onboarding, compliance, and platform-wide financial oversight.
 
-### Product Analytics
-
-Vendors can view:
-
-* Daily Product Sales
-* Weekly Sales
-* Monthly Sales
-* Product Revenue
-* Best Selling Products
-* Product Ratings
-* Customer Reviews
-* Low Stock Alerts
-* Cancelled Orders
-* Returned Orders
-
-### Delivery Configuration
-
-Each vendor can configure:
-
-* Cash on Delivery (Enable/Disable)
-* Delivery Charges
-* Free Delivery Threshold
-* Estimated Delivery Time
-* Shipping Availability
-* Delivery Locations
+| Pillar | What It Means Here |
+|---|---|
+| 🏢 **Multi-Tenancy** | Each vendor is a fully isolated business entity with independent data, branding, and operations |
+| 🛡️ **Governance & Compliance** | GST verification, document review, and product-level approval gates before anything goes live |
+| 📊 **Real-Time Business Intelligence** | Live revenue, order, and performance analytics across admin and vendor roles |
+| 💬 **Integrated Communication** | Order-linked, real-time chat connecting customers, vendors, and support |
 
 ---
 
-# 🛍 Customer Features
+## 🏗️ Platform Architecture
 
-Customers receive a modern shopping experience similar to Flipkart.
+CartSphere is built around **three role-scoped dashboards** — Administrator, Vendor, and Customer — sharing a common core (auth, catalog, orders, payments) while enforcing strict data and permission boundaries between tenants.
 
-### Authentication
+```
+                        ┌───────────────────────────┐
+                        │      Administrator         │
+                        │  Vendor & Product Approval  │
+                        │  Platform-Wide Analytics    │
+                        └──────────────┬──────────────┘
+                                       │ governs
+              ┌────────────────────────┼────────────────────────┐
+              │                        │                        │
+      ┌───────▼────────┐      ┌────────▼────────┐      ┌────────▼────────┐
+      │   Vendor A      │      │    Vendor B      │      │    Vendor C      │
+      │ Own Catalog      │      │ Own Catalog      │      │ Own Catalog      │
+      │ Own Orders       │      │ Own Orders       │      │ Own Orders       │
+      │ Own Analytics    │      │ Own Analytics    │      │ Own Analytics    │
+      └───────┬────────┘      └────────┬────────┘      └────────┬────────┘
+              │                        │                        │
+              └────────────────────────┼────────────────────────┘
+                                       │ shop across all vendors
+                              ┌────────▼─────────┐
+                              │     Customers      │
+                              │ Unified Marketplace │
+                              └─────────────────────┘
+```
 
-* Email Login
-* Google Login
-* OTP Verification
-* Secure Authentication
+### Architectural Principles
 
-### Shopping
-
-* Browse Products
-* Product Search
-* Category Filter
-* Brand Filter
-* Price Filter
-* Wishlist
-* Shopping Cart
-* Secure Checkout
-
-### Orders
-
-* Live Order Tracking
-* OTP Verification before Delivery
-* Order Status Updates
-* Invoice Download
-* Order History
-
-### Returns & Cancellation
-
-Customers can:
-
-* Cancel Orders
-* Request Returns
-* 7-Day Return Policy
-* Refund Tracking
-* Return Status Monitoring
-
-### Reviews & Ratings
-
-After successful delivery customers can:
-
-* Rate Products
-* Rate Vendors
-* Write Reviews
-* Upload Product Images
-* Comment on Products
-
-These ratings are displayed on both the product page and vendor dashboard.
+- **Tenant isolation** — every vendor's catalog, orders, and revenue data are logically partitioned, preventing cross-vendor data leakage
+- **Approval-gated publishing** — no vendor or product reaches the marketplace without passing an explicit administrative checkpoint
+- **Composable dashboards** — Admin, Vendor, and Customer experiences are built on shared primitives (auth, analytics, chat) but rendered as distinct, role-specific applications
+- **API-first backend** — Next.js API routes expose a consistent contract consumed by all three dashboards, keeping business logic centralized
 
 ---
 
-# 🔍 Smart Product Discovery
+## ⚙️ Role-Based Modules
 
-The platform includes an intelligent search and filtering system that helps customers quickly find products.
+### 👨‍💼 Administrator — Marketplace Control Plane
 
-Products can be filtered by:
+**Vendor Governance**
+- Approve / reject vendor registrations
+- GST number & business document verification
+- Suspend or block non-compliant vendors
+- Manage vendor subscription tiers
 
-* Category
-* Brand
-* Vendor
-* Price Range
-* Rating
-* Discount
-* Availability
-* New Arrivals
-* Best Sellers
-* Popular Products
+**Product Approval Pipeline**
+- Every product requires admin sign-off before going live
+- Review images, pricing, and listing details
+- Approve, reject-with-reason, or disable at any time
 
-Search results are displayed instantly based on customer preferences.
-
----
-
-# 💳 Payment & Delivery
-
-Supported payment methods include:
-
-* Credit/Debit Cards
-* UPI
-* Net Banking
-* Wallets
-* Cash on Delivery (Vendor Configurable)
-
-Delivery features:
-
-* OTP Verification Before Delivery
-* Live Order Tracking
-* Delivery Notifications
-* Delivery Charge Calculation
-* Free Shipping Rules
-* Estimated Delivery Date
+**Platform Intelligence Dashboard**
+- Daily / Monthly / Yearly revenue
+- Order funnel: total, pending, delivered, cancelled, returned
+- Best-selling & top-rated products
+- Top-performing vendors and revenue-by-vendor breakdown
+- Sales trend graphs and order analytics
 
 ---
 
-# 📊 Real-Time Analytics
+### 🏪 Vendor — Independent Store Operations
 
-The platform provides live dashboards with real-time data for administrators and vendors, including revenue, orders, product performance, customer ratings, and sales trends. Interactive charts and reports help users make informed business decisions.
+Each vendor operates a self-contained business dashboard:
+
+| Category | Capabilities |
+|---|---|
+| Identity | Company profile, GST details, store logo & banner |
+| Catalog | Product management, inventory management, stock monitoring |
+| Orders | Order management, cancellations, returns |
+| Growth | Sales analytics, revenue dashboard, coupon management |
+| Reputation | Customer reviews & product ratings |
+
+**Product Analytics** — daily / weekly / monthly sales, product-level revenue, best sellers, low-stock alerts, cancelled & returned order tracking.
+
+**Delivery Configuration** — vendors independently control Cash-on-Delivery availability, delivery charges, free-delivery thresholds, estimated delivery windows, and serviceable locations.
 
 ---
 
-# 🛠 Technology Stack
+### 🛍️ Customer — Unified Shopping Experience
 
-* **Frontend:** Next.js, React.js, TypeScript, Tailwind CSS, Shadcn UI
-* **Backend:** Node.js, Next.js API Routes
-* **Database:** MongoDB Atlas, Mongoose
-* **Authentication:** Auth.js (NextAuth), Google OAuth, Email Login
-* **Cloud Storage:** Cloudinary
-* **Payments:** Stripe / Razorpay
-* **Deployment:** Vercel, MongoDB Atlas, Cloudinary
+**Authentication:** Email login, Google login, OTP verification.
+
+**Discovery & Shopping:** Category/brand/price filtering, wishlist, cart, secure checkout.
+
+**Orders:** Live tracking, pre-delivery OTP verification, real-time status updates, invoice download, full order history.
+
+**Returns & Cancellations:** Order cancellation, return requests under a **7-day return policy**, refund and return-status tracking.
+
+**Reviews & Ratings:** Post-delivery product and vendor ratings, written reviews, and image uploads — surfaced on both the product page and the vendor's dashboard.
 
 ---
 
-# 💬 Real-Time Chat System
+## 🔍 Smart Product Discovery
 
-CartSphere includes a **real-time messaging system** that enables seamless communication between customers, vendors, and administrators. Customers can directly chat with vendors to ask product-related questions, request order updates, discuss return or replacement requests, and receive instant support before and after making a purchase. Vendors can respond in real time, improving customer satisfaction and reducing support delays.
+A unified, instant filtering engine spans the entire multi-vendor catalog:
 
-The chat system supports live message delivery, typing indicators, online/offline status, message timestamps, read receipts, image and file sharing, and conversation history. Customers automatically receive a chat option after placing an order, allowing them to communicate with the respective vendor regarding delivery, product issues, cancellations, or returns.
+`Category` · `Brand` · `Vendor` · `Price Range` · `Rating` · `Discount` · `Availability` · `New Arrivals` · `Best Sellers` · `Popular Products`
 
-Administrators can monitor conversations when necessary to resolve disputes, ensure compliance with marketplace policies, and provide additional support. The chat module is designed to be secure, scalable, and responsive, delivering a modern communication experience similar to leading e-commerce platforms.
+---
 
-### Chat Features
+## 💳 Payments & Delivery
 
-* 💬 Real-Time Customer ↔ Vendor Messaging
-* 👨‍💼 Admin Support & Conversation Monitoring
-* 🟢 Online/Offline Status
-* ✍️ Typing Indicators
-* ✅ Message Delivery & Read Receipts
-* 🖼️ Image and File Sharing
-* 📦 Order-Specific Chat
-* 🔔 Real-Time Notifications
-* 📱 Mobile Responsive Chat Interface
-* 🔒 Secure and Encrypted Communication
-* 🕒 Complete Chat History
-* 🚫 Block and Report Users
+| Payments | Delivery |
+|---|---|
+| Credit / Debit Cards | OTP verification before delivery |
+| UPI | Live order tracking |
+| Net Banking | Delivery notifications |
+| Wallets | Delivery charge calculation |
+| Cash on Delivery *(vendor-configurable)* | Free shipping rules & estimated delivery date |
 
+---
+
+## 💬 Real-Time Chat System
+
+CartSphere ships with a **first-class, order-linked messaging layer** connecting customers, vendors, and admins — not a bolted-on support widget.
+
+- Customers get a chat entry point automatically upon placing an order, scoped to that vendor and order
+- Vendors respond in real time to product questions, delivery updates, and return/replacement discussions
+- Admins can monitor conversations to resolve disputes and enforce marketplace policy
+
+### Chat Capabilities
+
+| Feature | Description |
+|---|---|
+| 💬 Real-Time Messaging | Instant Customer ↔ Vendor communication |
+| 👨‍💼 Admin Oversight | Conversation monitoring for dispute resolution |
+| 🟢 Presence | Online / offline status indicators |
+| ✍️ Typing Indicators | Live typing feedback |
+| ✅ Delivery & Read Receipts | Message-level confirmation |
+| 🖼️ Media Sharing | Image and file attachments |
+| 📦 Order-Scoped Threads | Conversations tied to specific orders |
+| 🔔 Real-Time Notifications | Instant alerts on new messages |
+| 📱 Responsive UI | Fully mobile-optimized chat interface |
+| 🔒 Secure Transport | Encrypted communication channel |
+| 🕒 Persistent History | Complete, searchable chat history |
+| 🚫 Moderation | Block and report users |
+
+---
+
+## 🔐 Security & Compliance
+
+| Layer | Control |
+|---|---|
+| Authentication | Auth.js (NextAuth), Google OAuth, Email login, OTP verification |
+| Vendor Onboarding | Mandatory GST verification & business document review |
+| Publishing Integrity | Admin approval gate on every vendor and every product |
+| Order Integrity | OTP verification prior to delivery confirmation |
+| Communication | Encrypted, order-scoped chat with block/report controls |
+| Data Isolation | Per-vendor data partitioning across catalog, orders, and analytics |
+
+---
+
+## 📊 Real-Time Analytics
+
+Both Admin and Vendor dashboards are powered by live data — revenue, order flow, product performance, and customer sentiment — rendered through interactive charts, enabling data-driven decisions across the marketplace without manual report generation.
+
+---
+
+## 🛠 Tech Stack
+
+| Layer | Technologies |
+|---|---|
+| **Frontend** | Next.js, React.js, TypeScript, Tailwind CSS, Shadcn UI |
+| **Backend** | Node.js, Next.js API Routes |
+| **Database** | MongoDB Atlas, Mongoose |
+| **Authentication** | Auth.js (NextAuth), Google OAuth, Email Login |
+| **Cloud Storage** | Cloudinary |
+| **Payments** | Stripe / Razorpay |
+| **Deployment** | Vercel, MongoDB Atlas, Cloudinary |
+
+---
+
+## 📈 Scalability Strategy
+
+```
+Current:   Multi-tenant monolith on Next.js API Routes  →  MongoDB Atlas (managed, sharding-ready)
+Next:      Per-domain service boundaries (Catalog / Orders / Chat / Payments)
+Future:    Dedicated realtime service for chat (WebSocket/Redis pub-sub)  →  Edge caching for catalog reads
+```
+
+- **MongoDB Atlas** provides managed scaling, replication, and sharding as vendor/catalog volume grows
+- **Cloudinary** offloads media storage and transformation from application servers
+- **Role-scoped API contracts** allow Admin, Vendor, and Customer surfaces to scale and deploy independently in the future
+- **Order-scoped chat threads** are structured to migrate cleanly to a dedicated real-time messaging service under high concurrency
+
+---
 
 ## 🌟 Why CartSphere?
 
-CartSphere is designed to deliver an enterprise-level marketplace experience similar to leading e-commerce platforms. It combines multi-vendor management, GST verification, administrator-controlled product approvals, real-time analytics, intelligent product search, secure payments, OTP-based delivery verification, configurable shipping options, customer reviews, ratings, order cancellation, and a 7-day return policy. Its scalable architecture, role-based security, and cloud-native design make it an ideal solution for building modern online marketplaces that support multiple businesses on a single platform.
+CartSphere delivers an enterprise-level marketplace experience by combining multi-vendor management, GST verification, administrator-controlled product approvals, real-time analytics, intelligent product discovery, secure multi-method payments, OTP-based delivery verification, vendor-configurable shipping, and a full reviews-and-returns lifecycle — all on a scalable, role-secured, cloud-native foundation built for running multiple independent businesses on one platform.
 
+---
 
+## 🚀 Roadmap
 
+- [ ] AI-driven product recommendations
+- [ ] Vendor subscription tiering with usage-based billing
+- [ ] Advanced fraud & anomaly detection for orders and reviews
+- [ ] Dedicated real-time messaging microservice (WebSocket/Redis)
+- [ ] Multi-currency & multi-region marketplace support
+- [ ] Vendor-facing API for external inventory sync
 
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:8A2BE2,100:FF6B00&height=100&section=footer" width="100%"/>
+</p>
