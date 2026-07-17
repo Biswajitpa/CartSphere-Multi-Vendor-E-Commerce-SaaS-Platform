@@ -405,7 +405,7 @@ CartSphere delivers an enterprise-level marketplace experience by combining mult
 ### **Biswajit Pattanaik**
 **Full-Stack Developer • System Design Engineer • AI Integration • Backend Engineering • UI/UX Designer • DevOps & Deployment Engineer**
 
-Designed, engineered, and deployed the **entire CartSphere platform** end-to-end — multi-tenant architecture, backend services, role-based dashboards, real-time chat system, and production infrastructure — as a single-owner, production-grade build.
+Designed, engineered, and deployed the **entire CartSphere platform** end-to-end — multi-tenant architecture, backend services, role-based dashboards, real-time chat system, and production infrastructure — as a single-owner, production-grade build
 
 <a href="https://github.com/Biswajitpa"><img src="https://img.shields.io/badge/GitHub-Biswajitpa-181717?logo=github&style=for-the-badge" /></a>
 
